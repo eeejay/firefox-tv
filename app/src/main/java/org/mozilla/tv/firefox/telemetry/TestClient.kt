@@ -15,6 +15,7 @@ import java.io.ByteArrayInputStream
 /**
  * [TestClient] for [TelemetryClient] to intercept fetch() and send request JSON payload to Log.d()
  */
+@Suppress("unused") // used for debugging.
 class TestClient : Client() {
     override fun fetch(request: Request): Response {
         var requestBodyString = request.url
